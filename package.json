@@ -1,0 +1,28 @@
+{
+  "name": "toolkit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Toolkit containing reusable libraries and utilities for projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:ts": "tsc -p tsconfig.json",
+    "build": "npm run build:ts",
+    "build:all": "npm run build --workspaces",
+    "clean": "rimraf dist packages/*/dist"
+  },
+  "keywords": ["toolkit","monorepo"],
+  "author": "ShiftTiger-VSC",
+  "license": "MIT",
+  "type": "commonjs",
+  "workspaces": [
+    "packages/*"
+  ]
+  ,
+  "devDependencies": {
+    "typescript": "^5.1.6",
+    "ts-node": "^10.9.1",
+    "@types/node": "^20.6.1",
+    "rimraf": "^5.0.0"
+  }
+}
