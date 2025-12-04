@@ -59,3 +59,8 @@ Thumbs.db
 .pnpm-store/
 .yarn/cache
 .yarn/install-state.gz
+
+# Ignore md files in project
+PUBLISHING.md
+LOCAL_NPM_SETUP.md
+SETUP.md

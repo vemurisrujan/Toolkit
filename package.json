@@ -3,13 +3,20 @@
   "version": "1.0.0",
   "private": true,
   "description": "Toolkit containing reusable libraries and utilities for projects",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vemurisrujan/Toolkit.git"
+  },
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p tsconfig.json",
     "build:ts": "tsc -p tsconfig.json",
-    "build": "npm run build:ts",
     "build:all": "npm run build --workspaces",
-    "clean": "rimraf dist packages/*/dist"
+    "clean": "rimraf dist packages/*/dist",
+    "clean:all": "rimraf **/dist",
+    "test": "npm test --workspaces",
+    "publish:packages": "npm run build && npm publish --workspaces",
+    "publish:logger": "npm run --workspace=@toolkit/logger build && npm publish --workspace=@toolkit/logger"
   },
   "keywords": ["toolkit","monorepo"],
   "author": "ShiftTiger-VSC",
