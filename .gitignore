@@ -29,9 +29,6 @@ out/
 .env.local
 .env.*.local
 
-# npm env files
-.npmrc
-
 # Logs
 logs/
 *.log
