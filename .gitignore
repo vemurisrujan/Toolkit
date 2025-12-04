@@ -29,6 +29,9 @@ out/
 .env.local
 .env.*.local
 
+# npm env files
+.npmrc
+
 # Logs
 logs/
 *.log
@@ -63,3 +66,4 @@ Thumbs.db
 PUBLISHING.md
 LOCAL_NPM_SETUP.md
 SETUP.md
+GITHUB_ACTIONS_PUBLISH.md
