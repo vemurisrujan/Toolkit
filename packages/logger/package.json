@@ -4,13 +4,23 @@
   "description": "Small, typed logging library for Node.js (TypeScript)",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vemurisrujan/Toolkit.git",
+    "directory": "packages/logger"
+  },
+  "homepage": "https://github.com/vemurisrujan/Toolkit/tree/main/packages/logger",
+  "bugs": {
+    "url": "https://github.com/vemurisrujan/Toolkit/issues"
+  },
   "files": [
     "dist"
   ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "clean": "rimraf dist",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "prepack": "npm run clean && npm run build"
   },
   "keywords": [
     "logger",

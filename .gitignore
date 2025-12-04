@@ -63,7 +63,9 @@ Thumbs.db
 .yarn/install-state.gz
 
 # Ignore md files in project
+PUBLISHING_SETUP.md
 PUBLISHING.md
 LOCAL_NPM_SETUP.md
 SETUP.md
 GITHUB_ACTIONS_PUBLISH.md
+QUICK_PUBLISH_CHECKLIST.md
