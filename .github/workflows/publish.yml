@@ -34,15 +34,17 @@ jobs:
       - name: Build all packages
         run: npm run build:all
 
+      - name: Configure npm authentication
+        run: |
+          mkdir -p ~/.npm
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+          chmod 600 ~/.npmrc
+
       - name: Verify npm authentication
         run: npm whoami
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Publish packages to npm
         run: npm run publish:packages
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Create GitHub Release
         uses: actions/create-release@v1
